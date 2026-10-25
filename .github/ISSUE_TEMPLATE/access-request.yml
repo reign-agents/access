@@ -1,0 +1,23 @@
+name: 사용 요청
+description: reign 엔진을 받고 싶다고 요청합니다(이 GitHub 계정으로 승인).
+title: "사용 요청"
+labels: ["access-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        이 이슈를 올린 GitHub 계정이 승인 대상입니다. 승인되면 비공개 레포 reign-agents/reign 의 읽기 초대가 갑니다 — 초대를 수락한 뒤 설치하세요.
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 쓰려는 곳
+      description: 어디에 쓰려는지 한두 줄(선택).
+    validations:
+      required: false
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: 확인
+      options:
+        - label: 이 이슈와 내 GitHub 아이디가 공개된다는 것을 압니다.
+          required: true
